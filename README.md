@@ -13,3 +13,63 @@ Tailwind CSS - framework CSS oparty na klasach. Zamiast definiować własne regu
 Django - framework webowy napisany w języku Python. Zapewnia narzędzia do szybkiego tworzenia skalowalnych aplikacji internetowych. Django używa wzorca architektonicznego Model-View-Controller (MVC) i obejmuje wiele wbudowanych funkcji, takich jak obsługa użytkowników, zarządzanie bazą danych, obsługa formularzy, bezpieczeństwo i wiele innych. Jest ceniony za swoją czytelność, prostotę i gotowe rozwiązania, które przyspieszają rozwój aplikacji webowych.
 
 PostgreSQL - potężny, otwartoźródłowy system zarządzania bazą danych relacyjnych. Posiada wiele zaawansowanych funkcji, takich jak transakcje, klucze obce, indeksy, widoki i triggery. PostgreSQL obsługuje standardowy język zapytań SQL oraz oferuje rozszerzenia, które umożliwiają bardziej zaawansowane operacje i funkcje.
+
+### Struktura oraz architektura aplikacji
+
+...
+
+### Diagram ERD
+
+<img src="./readme_images/diagram_erd.png" width=1000px />
+
+### Diagram UML
+
+...
+
+### Figma
+
+Figma to zaawansowane narzędzie do projektowania interfejsów użytkownika i tworzenia prototypów dostępne online. Umożliwia projektowanie UI, tworzenie interaktywnych prototypów, współpracę w czasie rzeczywistym, udostępnianie projektów poprzez linki, tworzenie prezentacji i zarządzanie bibliotekami komponentów. Dzięki łatwości użytkowania i elastyczności, Figma jest popularnym wyborem wśród projektantów interfejsów użytkownika.
+
+<img src="./readme_images/diagram_erd.png" width=1000px />
+
+[Aby zobaczyć całość naszej pracy, kliknij w ten link](https://www.figma.com/file/L3i79TFSb0BXJoesKHpLaH/Untitled?type=design&node-id=0%3A1&mode=design&t=slJUzth9BLML7q9f-1)
+
+## Format Pracy
+
+#### Git workflow to sposób organizacji pracy z systemem kontroli wersji Git. Istnieje wiele różnych podejść do tego, ale jednym z popularnych modeli jest GitFlow. Oto krótka informacja na temat działania GitFlow:
+
+- Głównym elementem GitFlow są dwie gałęzie: "master" i "develop". Gałąź "master" zawiera stabilny kod produkcyjny, natomiast gałąź "develop" służy do integracji kodu.
+
+- Aby rozpocząć pracę nad nowym zadaniem, tworzymy gałąź funkcji od gałęzi "develop". Ta gałąź jest tworzona dla każdej nowej funkcji, której praca jest rozpoczynana.
+
+- Kiedy praca nad funkcją zostanie ukończona, gałąź funkcji jest scalana z gałęzią "develop". W ten sposób wprowadzamy zmiany do głównej gałęzi projektu.
+
+- Przed wprowadzeniem zmian z gałęzi "develop" do "master" tworzona jest gałąź "release". Na tej gałęzi dokonywane są ostatnie poprawki, testy i przygotowania przed wydaniem nowej wersji.
+
+- Po zakończeniu prac na gałęzi "release", jest ona scalana z gałęzią "master", a także z gałęzią "develop". Dodatkowo, po scaleniu z gałęzią "master", oznaczamy ten punkt jako nową wersję oprogramowania.
+
+- Jeśli wystąpią błędy lub problemy po wydaniu wersji, naprawki są wykonywane na gałęzi "hotfix". Gałąź "hotfix" jest tworzona bezpośrednio z gałęzi "master", aby umożliwić szybkie wprowadzenie poprawek do stabilnej wersji.
+
+- Po naprawieniu błędu na gałęzi "hotfix", zmiany są scalane z gałęzią "master" i "develop". Po scaleniu z "master" oznaczamy ten punkt jako nową wersję.
+
+GitFlow pomaga w zorganizowaniu pracy zespołu, umożliwiając równoczesne tworzenie nowych funkcji, poprawki błędów oraz utrzymanie stabilnej wersji produkcyjnej.
+
+##### Z racji poziomu zaawansowania projektu oraz faktu, iż jest to dopiero prototyp, ominiemy gałęzie takie jak release oraz hotfix.
+
+<img src="./readme-images/git_workflow.png" width=1000px />
+
+## Bezpieczeństwo aplikacji
+
+...
+
+## Opis widoków
+
+...
+
+## Kierunek rozwoju
+
+...
+
+## Dodatkowe informacje
+
+...
