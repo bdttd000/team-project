@@ -30,7 +30,7 @@ PostgreSQL - potężny, otwartoźródłowy system zarządzania bazą danych rela
 
 Figma to zaawansowane narzędzie do projektowania interfejsów użytkownika i tworzenia prototypów dostępne online. Umożliwia projektowanie UI, tworzenie interaktywnych prototypów, współpracę w czasie rzeczywistym, udostępnianie projektów poprzez linki, tworzenie prezentacji i zarządzanie bibliotekami komponentów. Dzięki łatwości użytkowania i elastyczności, Figma jest popularnym wyborem wśród projektantów interfejsów użytkownika.
 
-<img src="./readme_images/diagram_erd.png" width=1000px />
+<img src="./readme_images/figma_preview.png" width=1000px />
 
 [Aby zobaczyć całość naszej pracy, kliknij w ten link](https://www.figma.com/file/L3i79TFSb0BXJoesKHpLaH/Untitled?type=design&node-id=0%3A1&mode=design&t=slJUzth9BLML7q9f-1)
 
