@@ -56,7 +56,7 @@ GitFlow pomaga w zorganizowaniu pracy zespołu, umożliwiając równoczesne twor
 
 ##### Z racji poziomu zaawansowania projektu oraz faktu, iż jest to dopiero prototyp, ominiemy gałęzie takie jak release oraz hotfix.
 
-<img src="./readme-images/git_workflow.png" width=1000px />
+<img src="./readme_images/git_workflow.png" width=1000px />
 
 ## Bezpieczeństwo aplikacji
 
