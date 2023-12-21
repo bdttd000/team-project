@@ -1,6 +1,6 @@
-from rest_framework import generics
-from .models import CustomUser
-from .serializers import UserSerializer
+from rest_framework import generics, viewsets, permissions
+from .models import CustomUser, Image
+from .serializers import UserSerializer, ImageSerializer
 
 class CreateUserView(generics.CreateAPIView):
     model = CustomUser
@@ -20,3 +20,15 @@ class LoginView(APIView):
         if user:
             return Response(UserSerializer(user).data)
         return Response({'error': 'Niepoprawne dane logowania'}, status=status.HTTP_400_BAD_REQUEST)
+    
+class ImageViewSet(viewsets.ModelViewSet):
+    queryset = Image.objects.all()
+    serializer_class = ImageSerializer
+    permission_classes = [permissions.IsAuthenticated] # Ensure only authenticated users can upload
+
+    def perform_create(self, serializer):
+        serializer.save(user=self.request.user)
+
+    def get_queryset(self):
+        # Optionally, filter images to only show those uploaded by the logged-in user
+        return Image.objects.filter(user=self.request.user)
