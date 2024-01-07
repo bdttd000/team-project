@@ -24,7 +24,7 @@ const Login: React.FC = () => {
       <div className='lg:w-1/2 flex flex-col justify-center content-center flex-wrap gap-6'>
         <img className='w-2/5' src={Logo} alt='Logo'></img>
         {/* <div className='text-center text-black font-bold text-5xl'>Zarejestruj się</div> */}
-        <div className='outline-none bg-blue-500 p-2 rounded-lg text-white cursor-pointer text-center text-xl' onClick={() => {navigate('register')}}> 
+        <div className='outline-none bg-blue-500 p-2 rounded-lg text-white cursor-pointer text-center text-xl' onClick={() => {navigate('/register')}}> 
           Zarejestruj się
         </div>
       </div>
