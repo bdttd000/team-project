@@ -6,7 +6,7 @@ interface LayoutAuthProps {
 
 const LayoutAuth: React.FC<LayoutAuthProps> = ({ children }) => {
     return (
-    <div className='flex flex-col lg:flex-row gap-5 lg:gap-0 w-screen min-h-screen bg-gray-100'>
+    <div className='flex flex-col justify-center lg:flex-row gap-10 lg:gap-0 w-screen min-h-screen bg-gray-100'>
         {children}
     </div>
   )
