@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import LayoutAuth from "../../layouts/LayoutAuth";
-import { Input, Submit } from "../../components/form";
+import { Input, Submit } from "../../components/Form";
 import Logo from "../../assets/logo.png";
 import { Link, useNavigate } from "react-router-dom";
+import axios from 'axios';
+
 
 const Login: React.FC = () => {
   const [loginData, setLoginData] = useState({ email: "", password: "" });
@@ -12,9 +14,17 @@ const Login: React.FC = () => {
     setLoginData((prevData) => ({ ...prevData, [name]: value }));
   };
 
-  const handleSubmit = (e: any) => {
-    e.preventDefault();
+  const handleSubmit = async (e: React.SyntheticEvent) => {
+    e.preventDefault();  //
     console.log("Dane logowania:", loginData);
+   try {
+    const response = await axios.post('http://localhost:8000/token/', setLoginData);
+    localStorage.setItem('access_token', response.data.access);
+    localStorage.setItem('refresh_token', response.data.refresh);
+    navigate('/home');
+  } catch (error) {
+    console.error('Błąd logowania:', error);
+  }
   };
 
   let navigate = useNavigate();

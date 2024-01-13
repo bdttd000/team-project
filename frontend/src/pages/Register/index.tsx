@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import LayoutAuth from "../../layouts/LayoutAuth";
-import { Input, Submit } from "../../components/form";
+import { Input, Submit } from "../../components/Form";
 import Logo from "../../assets/logo.png";
 import { Link, useNavigate } from "react-router-dom";
+import axios from 'axios';
 
 const Register: React.FC = () => {
   const [registerData, registerDataData] = useState({
@@ -17,9 +18,17 @@ const Register: React.FC = () => {
     registerDataData((prevData) => ({ ...prevData, [name]: value }));
   };
 
-  const handleSubmit = (e: any) => {
-    e.preventDefault();
-    console.log("Dane rejestracji:", registerData);
+  const handleSubmit = async (e: React.SyntheticEvent) => {
+    e.preventDefault();  //
+    console.log("Dane logowania:", registerData);
+   try {
+    const response = await axios.post('http://localhost:8000/token/', registerDataData);
+    localStorage.setItem('access_token', response.data.access);
+    localStorage.setItem('refresh_token', response.data.refresh);
+    navigate('/home');
+  } catch (error) {
+    console.error('Błąd logowania:', error);
+  }
   };
 
   let navigate = useNavigate();
